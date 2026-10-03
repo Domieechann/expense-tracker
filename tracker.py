@@ -12,6 +12,6 @@ print("  [2] View all expenses" "\t" "(coming soon)")
 print("  [3] Show total spent" "\t" "(coming soon)")
 print("  [4] Exit" "\t\t" "(coming soon)")
 
-print("-" * 40)
+print("============================================================")
 print("Made by: Dominic A. Aquino  |  1st Laboratory")
 print("============================================================")
