@@ -1,4 +1,6 @@
 # Developer: Dominic A. Aquino
+#installment 1
+#landing page
 
 print("============================================================")
 print("\t   EXPENSE TRACKER")
