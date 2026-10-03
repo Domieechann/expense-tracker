@@ -1,6 +1,5 @@
 # Developer: Dominic A. Aquino
-#installment 2
-#Expense Tracker - Installment 2: Talking to the User
+# Expense Tracker - Installment 3: The Tracker Does Math
 
 print("============================================================")
 print("\t   EXPENSE TRACKER")
@@ -15,32 +14,39 @@ print("  [3] Show total spent" "\t" "(coming soon)")
 print("  [4] Exit" "\t\t" "(coming soon)")
 
 print("============================================================")
-print("Made by: Dominic A. Aquino  |  1st Laboratory")
-print("============================================================")
-
-#installment 2
 
 name = input("What is your name?: ")
-print ("Welcome," , name , "lets log two expenses.")
+print("Welcome,", name, "lets log two expenses.")
 
-item1 = input ("first expense?: ")
+subtotal = 0
+
+item1 = input("first expense?: ")
 amount1 = float(input("How much?: "))
+subtotal = subtotal + amount1
 
-item2 = input ("second expense?: ")
+item2 = input("second expense?: ")
 amount2 = float(input("how much?: "))
+subtotal = subtotal + amount2
 
-total = amount1 + amount2
-print("Total expenses for", name, ":", total)
+tax_percent = float(input("Tax rate %?: "))
+budget = float(input("Your budget?: "))
 
-average = total / 2
+average = subtotal / 2
+tax = subtotal * (tax_percent / 100)
+total = subtotal + tax
+over_budget = total > budget
+left = budget - total
 
 print("============================================================")
 print("SUMMARY")
-print(f"  - {item1}:     ${amount1}")
-print(f"  - {item2}:     ${amount2}")
-print(f"Total spent:    ${total}")
-print(f"Average:        ${average}")
+print(f"  - {item1}:\t\t${amount1}")
+print(f"  - {item2}:\t\t${amount2}")
+print(f"Subtotal:\t\t${subtotal}")
+print(f"Average:\t\t${average}")
+print(f"Tax ({tax_percent}%):\t\t${tax}")
+print(f"Grand total:\t\t${total}")
+print(f"Over budget?:\t\t{over_budget}")
+print(f"Left in budget:\t\t${left}")
 print("============================================================")
-print("Made by: Dominic A. Aquino  |  Installment 2")
+print("Made by: Dominic A. Aquino  |  Installment 3")
 print("============================================================")
-
